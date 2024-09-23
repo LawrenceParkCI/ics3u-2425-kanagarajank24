@@ -8,7 +8,7 @@ public class AboutMe {
 
 	public static void main(String[] args) {
 		// This statement is the title
-		System.out.println("About Me :)\n-----------");
+		System.out.println("About Me \n--------");
 
 		// These statements describe my name, grade, school and teacher
 		System.out.println("\nMy name is Kaleena Kanagarajan.");
