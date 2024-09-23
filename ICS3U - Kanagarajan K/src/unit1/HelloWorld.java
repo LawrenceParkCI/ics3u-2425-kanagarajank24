@@ -9,7 +9,8 @@ public class HelloWorld {
 	public static void main(String[] args) {
 		//This print hello to the system console
 		System.out.println("Hello World!");
-		System.out.println("Bonjour le monde!");
+		System.out.println("Bonjour Le Monde!");
+		System.out.println("Hola The World");
 		/*
 		 * This is a block comment 
 		 * <br> is break line in HTML]
