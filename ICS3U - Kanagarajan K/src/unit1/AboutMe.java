@@ -16,9 +16,13 @@ public class AboutMe {
 		System.out.println("I am in the 11th grade at Lawrence Park Collegiate Insitute.");
 
 		System.out.println("My teacher is Ms. Kemp.");
-
-
-
+		
+		System.out.println("\"Go Panthers\"");
+		
+		//These statements print out my schedule this week 
+		
+		System.out.printf("|%-6s|%-7s|%-9s|%-8s|%-6s|", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday");
+		
 	}
 
 }
