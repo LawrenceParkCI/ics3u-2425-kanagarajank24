@@ -19,13 +19,14 @@ public class CreatingVariables {
 		int sideLength = 25;
 		int area = sideLength*sideLength;
 		System.out.println(sideLength + " x " + sideLength + " = " + area);
-		System.out.println("The area of the sqaure is " + area + "\n");
+		System.out.println("The area of the sqaure is " + area + ".\n");
 
 
 		//Key Question: what if the value I want to use needs to change?
 		/*
 		 * Then we can change it like this: sideLength = newValue;.
-		 * Addtionally, this must come before the calculation you want to include it in
+		 * Also, this must come before the calculation you want to include it in the average and print statements. 
+		 * If not, then you should recalculate the average and make new print statements.
 		 */
 
 		/*
@@ -40,18 +41,20 @@ public class CreatingVariables {
 
 		System.out.println("Part 1");
 		//what do you notice is being printed out?
-
+		//The value of myNum is printed, then it is reassigned and printed again
 		int myNum;
 		myNum = 10;
 		System.out.print("myNum = ");
 		System.out.println(myNum);
 
 		myNum = 20;
-		System.out.println("myNum is now " + myNum);
+		System.out.println("myNum is now " + myNum + ".");
+		
 		//Why do the two codes print out different things?
+		// Because myNum was orginally assigned the number 10 in the first print statement, then it was reassigned 20 in the second on.
 
 
-		System.out.println("Part 2 - Creating a Variable");
+		System.out.println("\nPart 2 - Creating a Variable");
 
 		/*
 		A variable be:
@@ -72,13 +75,17 @@ public class CreatingVariables {
 		*/
 
 		//Declare and initialize an int variable called myAge that stores your age.
+		int myAge = 15;
 
 
 		//Print it out in a sentence (Hint: remember how we combined text and numbers in a print statement)
+		System.out.println("My age is " + myAge + ".");
 
 		//Assign it a new value, that is 10 more than the original value
+		myAge = 25;
 
 		//Print it out in a new sentence (Hint: remember how we combined text and numbers in a print statement)
+		System.out.println("In 10 years, I will be " + myAge + " years old.");
 
 
 
