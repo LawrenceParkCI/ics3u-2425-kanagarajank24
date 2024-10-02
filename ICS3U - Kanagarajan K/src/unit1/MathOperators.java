@@ -67,7 +67,7 @@ public class MathOperators {
      System.out.println(3 * 5);
      //System.out.println("Hello" * 3);
      
-     // / means:  * is used to find the difference between two numbers. It cannot be used to between other types like strings, as shown below.
+     // / means:  / is used to find the quotient  between two numbers. It cannot be used to between other types like strings, as shown below.
      // Also, when combined with other things like another slash or a *, it can be used to make comment.
      System.out.println(10 / 5);
      //System.out.println("Hello" / 3);
@@ -79,12 +79,25 @@ public class MathOperators {
      System.out.println(3 + 2 *5);
      
      //Was this expected? Why or why not?
+     // This was expected because Java follows the order od operations.
+     
      /*
         Part 2 - Calculate Using Operators
         Print out, using one println statement, what 45 degrees Celsius is in Fahrenheit
         
+        
         Print out, using a print and a println statement, what 900 Fahrenheit is in Celsius
-     */     
+     */   
+     
+     int celsius = 45;
+     int fahrenheit = (celsius * 9/5) + 32;
+     
+     System.out.println("\n45 degress celsius is " + fahrenheit + " degrees fahrenheit");
+     
+     fahrenheit = 900;
+     celsius = (fahrenheit - 32) * 5/9;
+     
+     System.out.println("900 degress farenheit is " + celsius + " degrees celsius\n");
      
      /*
         Part 3
@@ -92,7 +105,9 @@ public class MathOperators {
         to check your answer.
      */
      
-     //I think % means: 
+     System.out.println(5%2);
+     
+     //I think % means: This operator mean the remainder of the division between two operands.
      
 
 	}
