@@ -11,8 +11,29 @@ public class InputFP {
 	 * @param args unused
 	 */
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 		
-		//This line
+		//This line declares my variables
+		double num1, num2;
+		
+		//Assigning value to num1
+		System.out.println("Type in a decimal number and <Enter>");
+		num1 = sc.nextDouble();
+		
+		//Assigning value to num2
+		System.out.println("Type in another decimal number and <Enter>");
+		num2 = sc.nextDouble();
+		
+		//prints and empty line
+		System.out.println();
+		
+		//Printing out the variable values
+		System.out.println("The first number entered was " + num1);
+		System.out.println("The second number entered was " + num2);
+		
+		sc.close();
+		
+		
 
 	}
 
