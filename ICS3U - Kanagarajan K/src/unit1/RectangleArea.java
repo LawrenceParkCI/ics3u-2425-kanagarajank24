@@ -22,18 +22,27 @@ public class RectangleArea {
 		System.out.println("------------");
 
 		//Getting Length
-		System.out.println("\n Type in the length of the rectangle and <Enter>");
+		System.out.println("\n Type in the length of the rectangular prism and <Enter>");
 		length = sc.nextInt();
 
 		// Getting width
-		System.out.println("\n Type in the width of the rectangle and <Enter>");
+		System.out.println("\n Type in the width of the rectangular prism and <Enter>");
 		width = sc.nextInt();
+		
+		//If this was a rectangle, this would be the area
+		int area = width * length;
+		
+		System.out.println("If this was a rectangle, the area would be " + area + " units sqaured.");
 
-		// Calculate area
-		int area = length * width;
+		// Getting depth
+				System.out.println("\n Type in the depth of the rectangular prism and <Enter>");
+				depth = sc.nextInt();
+
+		// Calculate volume
+		int volume = length * width * depth;
 
 		//Print the output
-		System.out.println("The area of the rectangle is " + area + " units sqaured.");
+		System.out.println("The area of the rectangle is " + volume + " units cubed.");
 
 		sc.close();
 
@@ -42,3 +51,4 @@ public class RectangleArea {
 	}
 
 }
+ 
