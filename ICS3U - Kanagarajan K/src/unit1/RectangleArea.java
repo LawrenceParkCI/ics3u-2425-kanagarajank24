@@ -42,7 +42,7 @@ public class RectangleArea {
 		int volume = length * width * depth;
 
 		//Print the output
-		System.out.println("The area of the rectangle is " + volume + " units cubed.");
+		System.out.println("The volume of the rectangle is " + volume + " units cubed.");
 
 		sc.close();
 
