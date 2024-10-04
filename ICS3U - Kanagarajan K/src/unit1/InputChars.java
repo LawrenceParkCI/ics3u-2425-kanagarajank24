@@ -1,7 +1,7 @@
 package unit1;
 import java.util.Scanner;
 /**
- * Description: This programs follows the Characters Variables Worksheet. <br>
+ * Description: This program follows the Characters Variables Worksheet. <br>
  * Date: Oct 3, 2024
  * @author Kaleena Kanagarajan
  */
