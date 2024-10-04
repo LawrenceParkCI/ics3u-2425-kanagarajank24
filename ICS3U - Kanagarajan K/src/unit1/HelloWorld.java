@@ -1,11 +1,10 @@
 package unit1;
 /**
- * Description: This programs prints Hello World, and two other statements. <br> 
+ * Description: This programs print Hello World, and two other statements. <br> 
  * Date: September 19, 2024 
  * @author Kaleena Kanagarajan
  */
 public class HelloWorld {
-	
 	/**
 	 * This is the entry point to the program
 	 * @param args unused
