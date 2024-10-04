@@ -1,6 +1,6 @@
 package unit1;
 /**
- * Description: This programs print Hello World, and two other statements. <br> 
+ * Description: This program print Hello World, and two other statements. <br> 
  * Date: September 19, 2024 
  * @author Kaleena Kanagarajan
  */
