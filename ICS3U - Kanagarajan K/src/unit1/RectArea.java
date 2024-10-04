@@ -1,9 +1,7 @@
 package unit1;
-
-
 import java.util.Scanner;
 /**
- * Description: This programs follows the Integer Variables Worksheet. <br>
+ * Description: This program follows the Integer Variables Worksheet. <br>
  * Date: Oct 2, 2024
  * @author Kaleena Kanagarajan
  */
