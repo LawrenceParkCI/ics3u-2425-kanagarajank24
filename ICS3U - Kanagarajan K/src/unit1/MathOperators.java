@@ -1,6 +1,6 @@
 package unit1;
 /**
- * Description: This programs follows the Math Operators worksheet. <br>
+ * Description: This program follows the Math Operators worksheet. <br>
  * Date: Oct 1, 2024
  * @author Kaleena Kanagarajan
  */
