@@ -1,6 +1,6 @@
 package unit1;
 /**
- * Description: This programs follows the Creating Variables worksheet. <br>
+ * Description: This program follows the Creating Variables worksheet. <br>
  * Date: September 30, 2024
  * @author Kaleena Kanagarajan
  */
