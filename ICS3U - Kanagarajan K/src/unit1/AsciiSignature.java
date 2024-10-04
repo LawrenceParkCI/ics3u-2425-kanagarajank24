@@ -1,6 +1,6 @@
 package unit1;
 /**
- * Description: This programs includes the author's signature and an image in Ascii text. <br>
+ * Description: This program includes the author's signature and an image in Ascii text. <br>
  * Date: September 26, 2024
  * @author Kaleena Kanagarajan
  */
