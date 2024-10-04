@@ -1,6 +1,6 @@
 package unit1;
 /**
- * Description: This programs follows the Working with Strings Worksheet. <br>
+ * Description: This program follows the Working with Strings Worksheet. <br>
  * Date: Oct 4, 2024
  * @author Kaleena Kanagarajan
  */
