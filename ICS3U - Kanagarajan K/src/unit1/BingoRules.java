@@ -1,6 +1,6 @@
 package unit1;
 /**
- * Description: This programs describes the rules of Bingo and gives an example of a Bingo card. <br>
+ * Description: This program describes the rules of Bingo and gives an example of a Bingo card. <br>
  * Date: September 25, 2024
  * @author Kaleena Kanagarajan
  */
