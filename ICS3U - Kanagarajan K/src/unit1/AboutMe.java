@@ -1,6 +1,6 @@
 package unit1;
 /**
- * Description: This programs describes things about me (name, grade, teacher and school) <br>
+ * Description: This program describes things about me (name, grade, teacher and school) <br>
  * Date: September 21, 2024
  * @author Kaleena Kanagarajan
  */
