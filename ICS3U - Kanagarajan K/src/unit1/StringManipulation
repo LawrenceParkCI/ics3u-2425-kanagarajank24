@@ -2,7 +2,7 @@ package unit1;
 import java.util.Scanner;
 /**
 * Description: This program completes Part 3: String Manipulation of Assignment 2. <br>
-* Date: Oct 6, 2024
+* Date: Oct 5, 2024
 * @author Kaleena Kanagarajan
 */
 public class StringManipulation {
