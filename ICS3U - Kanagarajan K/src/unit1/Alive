@@ -51,15 +51,7 @@ public class Alive {
 
 
 		//Calculations
-		int daysAlive = ( + ((year2 - year1 - 1 ) * 365) + ((12 - month1) * 30 + 30 - (day1 - 1)) + ((month2 - 1) * 30 + day2));
-		/**
-		 * These calculations are based on the fact that we are assuming there are 365 days in a year and 30 days in a month.
-		 * It does not calculate for leap years.
-		 *
-		 * ((year2 - year1 - 1 ) * 365) finds how many days are in the full years you have lived. So this does not include your birth year and the current year.
-		 * ((12 - month1) * 30 + 30 - (day1 - 1)) find the amount of days you lived in your birth year.
-		 * ((month2 - 1) * 30 + day2) finds how many days you have lived in the current year.
-		 */
+		int daysAlive =(year2 - year1) * (365) + (month2 - month1) * (30) + (day2 - day1);
 		int sleepTime = daysAlive * 8;
 		//This multiples the number f days you have lived by 8, as we assume that we sleep 8/day
 
@@ -71,6 +63,7 @@ public class Alive {
 		System.out.println("You have slept for " + sleepTime + " hours.");
 
 
-        sc.close();
+		sc.close();
 	}
 }
+
