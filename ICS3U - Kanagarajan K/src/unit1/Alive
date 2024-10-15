@@ -53,7 +53,7 @@ public class Alive {
 		//Calculations
 		int daysAlive =(year2 - year1) * (365) + (month2 - month1) * (30) + (day2 - day1);
 		int sleepTime = daysAlive * 8;
-		//This multiples the number f days you have lived by 8, as we assume that we sleep 8/day
+		//This multiples the number of days you have lived by 8, as we assume that we sleep 8/day
 
 
 
