@@ -1,10 +1,10 @@
 package unit1;
 import java.util.Scanner;
 /**
-* Description: This program completes Part 3: String Manipulation of Assignment 2. <br>
-* Date: Oct 5, 2024
-* @author Kaleena Kanagarajan
-*/
+ * Description: This program completes Part 3: String Manipulation of Assignment 2. <br>
+ * Date: Oct 5, 2024
+ * @author Kaleena Kanagarajan
+ */
 public class StringManipulation {
 	/**
 	 * This is the entry point to the program
@@ -26,10 +26,10 @@ public class StringManipulation {
 		//First Word
 		int i = str.indexOf(" ");
 		System.out.println(str.substring(0,i));
-		
+
 		//Last Word
 		System.out.println(str.substring(i + 1));
-		
+
 		sc.close();
 	}
 }
