@@ -85,6 +85,7 @@ public class Casting3 {
 		 * This works because -5 is an int, but it is casted into a double. So it becomes -5.0.
 		 * 
 		 */
+		
 		//What can you say about how we can use the function, Double.parseDouble()?
 		// I can say that we use this function only to convert a string into an Double. 
 		//Everything within the string must create a number (a Double or an int), or else an error will occur.

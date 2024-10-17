@@ -91,6 +91,7 @@ public class Casting {
 		myNum = (double) (myNum/10);
 		//Print out the result
 		System.out.println(myNum);
+		
 
 		sc.close();
 		in.close();
