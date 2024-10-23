@@ -14,11 +14,9 @@ import java.time.format.DateTimeFormatter;
 public class GroceryShopping {
 	/**
 	 * This is the entry point to the program
-	 * This method takes input about the items the user wants to buy
-	 * and outputs a receipt.
 	 * @param args unused
 	 */
-	static void GroceryStore() {
+	public static void main(String[] args) {
 
 		//Variables
 
@@ -42,21 +40,18 @@ public class GroceryShopping {
 		DecimalFormat money = new DecimalFormat("##.00");
 
 		//Final Calculations
-		double nearestFive;
 		double subtotal = 0; 
-		double total;
-		int totalInt;
 		double tax;
+		double total;
+		double nearestFive;
 		final double TAX_RATE = 0.13;
-
-
 
 		System.out.println("|| $$$ \\\\\\ ========== \"Kaleena's Grocery Store\" ========== /// $$$ ||\n");
 		System.out.println("Welcome to Kaleena's Grocery Store!\n");
 		System.out.println();
 		//The while loop is used to handle user input errors
 		while (true) {
-			System.out.print("How many items would you like to buy? ");
+			System.out.print("How many items would you like to buy today? ");
 			try {
 				n = sc.nextInt() + 1;
 				break;
@@ -84,7 +79,7 @@ public class GroceryShopping {
 			System.out.println("\nItem " + i + ":");
 
 			//Item name
-			System.out.print("What are you buying today? ");
+			System.out.print("What are you buying? ");
 			items[i] = sc.nextLine();
 
 			//Item cost
@@ -155,9 +150,8 @@ public class GroceryShopping {
 		//Final Calculations
 		tax = subtotal * TAX_RATE;
 		total = subtotal + tax;
-		totalInt = (int)(Math.rint(total* 100));
 		nearestFive = Math.round(total / 0.05) * 0.05;
-	
+
 		//Outputs
 		System.out.printf("%54s %5s\n", "Subtotal:    $ ", money.format(subtotal));
 		System.out.printf("%54s %5s\n", "Tax:    $ ", money.format(tax));
@@ -165,52 +159,13 @@ public class GroceryShopping {
 
 		System.out.println("\n\n\nThis is approximately $" + Math.round(total) + ".");
 		System.out.println("This is approximately $" + money.format(nearestFive) + ", when rounded to the nearest 5 cents.");
-		
-		//sc.close();
 
-	}
-	
-	/**
-	 * This is the entry point to the program
-	 * This is my main method, where I call my GroceryStore method
-	 * and ask the user if they want to do the program again.
-	 * @param args unused
-	 */
-	public static void main(String[] args) {
-
-
-		//Variables
-		String userInput, yes;
-
-		//Scanner
-		Scanner sc = new Scanner(System.in);
-
-		//This while loop is used to check if the user wants to go shopping again
-		while (true) {
-			//actual program method
-			GroceryStore();
-
-			//Get user input
-			System.out.println("\n\nWould you like to go shopping again (yes or no)?");
-			userInput = sc.nextLine();
-			yes = "yes";
-			
-			//If and else statements to either continue the shopping or end it
-			if (yes.equalsIgnoreCase(userInput)) {
-				System.out.println("____________________________________________________________________________________________________________________________________________________________________________________________________________________________________\n");				
-				continue;
-			}
-			else {
-				break;
-			}
-			
-		}
-		
 		//Goodbye messages
 		System.out.println("\nThank you for shopping at Kaleena's Grocery Store!");
 		System.out.println("Have a good day:)");
+
 		sc.close();
-		
+
 	}
 
 }
