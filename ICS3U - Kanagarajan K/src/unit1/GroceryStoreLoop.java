@@ -14,6 +14,8 @@ import java.time.format.DateTimeFormatter;
 public class GroceryStoreLoop {
 	/**
 	 * This is the entry point to the program
+	 * This method takes input about the items the user wants to buy
+	 * and outputs a receipt.
 	 * @param args unused
 	 */
 	static void GroceryStore() {
@@ -164,6 +166,8 @@ public class GroceryStoreLoop {
 	}
 	/**
 	 * This is the entry point to the program
+	 * This is my main method, where I call my GroceryStore method
+	 * and ask the user if they want to do the program again.
 	 * @param args unused
 	 */
 	public static void main(String[] args) {
