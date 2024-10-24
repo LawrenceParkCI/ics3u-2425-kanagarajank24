@@ -1,7 +1,6 @@
 package unit1;
 
 import java.text.DecimalFormat;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -31,9 +30,6 @@ public class GroceryShopping {
 		double[] prices;
 		int[] amounts;
 
-		//This variable helps to capitalize the item names
-		String[] itemC;
-
 		//Formats
 		LocalDateTime dateTime = LocalDateTime.now();
 		DateTimeFormatter timeF = DateTimeFormatter.ofPattern("dd/MM/yyyy  HH:mm:ss");
@@ -49,26 +45,16 @@ public class GroceryShopping {
 		System.out.println("|| $$$ \\\\\\ ========== \"Kaleena's Grocery Store\" ========== /// $$$ ||\n");
 		System.out.println("Welcome to Kaleena's Grocery Store!\n");
 		System.out.println();
-		//The while loop is used to handle user input errors
-		while (true) {
-			System.out.print("How many items would you like to buy today? ");
-			try {
-				n = sc.nextInt() + 1;
-				break;
-			}
-			catch (InputMismatchException e){
-				System.out.println("\nERROR! Please input a number.");
 
-				////This line helps get rid of the scanner error
-				sc.nextLine();
-			}			
-		}
+		//Get user input about how many items they want to buy
+		System.out.print("How many items would you like to buy today? ");
+		n = sc.nextInt() + 1;
+
 
 		//Initializing my arrays
 		items = new String[n];
 		prices = new double[n];
 		amounts = new int[n];
-		itemC = new String[n];
 
 		//This line helps get rid of the scanner error
 		sc.nextLine();
@@ -78,40 +64,15 @@ public class GroceryShopping {
 		for(var i = 1; i < n; i++) {
 			System.out.println("\nItem " + i + ":");
 
-			//Item name
+			//Gets user input for item name, cost and quantity
 			System.out.print("What are you buying? ");
 			items[i] = sc.nextLine();
 
-			//Item cost
-			//The while loop is used to handle user input errors
-			while(true) {
-				System.out.print("How much does it cost? $");
-				try {
-					prices[i] = sc.nextDouble();
-					break;
-				}
-				catch (InputMismatchException e){					
-					System.out.println("\nERROR! Please input a number.");
+			System.out.print("How much does it cost? $");
+			prices[i] = sc.nextDouble();
 
-					////This line helps get rid of the scanner error
-					sc.nextLine();
-				}
-			}
-
-			//Item quantity 
-			while(true) {
-				System.out.print("How many are you buying? ");
-				try {
-					amounts[i] = sc.nextInt();
-					break;
-				}
-				catch (InputMismatchException e) {
-					System.out.println("\nERROR! Please input a number.");
-
-					////This line helps get rid of the scanner error
-					sc.nextLine();
-				}
-			}
+			System.out.print("How many are you buying? ");
+			amounts[i] = sc.nextInt();
 
 			//This line helps get rid of the scanner error
 			sc.nextLine();
@@ -122,23 +83,22 @@ public class GroceryShopping {
 			subtotal += prices[i] * amounts[i];
 
 			//To format the item name so that the first letter is the only one capitalized
-			itemC[i] = items[i].toUpperCase();
 			items[i] = items[i].toLowerCase();
-			items[i] = items[i].replace(items[i].charAt(0), itemC[i].charAt(0));
+			items[i] = items[i].substring(0, 1).toUpperCase() + items[i].substring(1);
 
 		}		
 
-		//Receipt
+		//Receipt Header
 		System.out.println("\nHere is your receipt:\n");
 
 		System.out.println("--------------------Kaleena's Grocery Store--------------------");
 
-		//date and time
+		//Date and Time
 		System.out.println(timeF.format(dateTime));
 
-		System.out.printf("\n %-15s|%-15s|%-15s|%-15s", "Item", "     Price", "    Quant.", "  Total Price");
 
-		//Items
+		//Receipt
+		System.out.printf("\n %-15s|%-15s|%-15s|%-15s", "Item", "     Price", "    Quant.", "  Total Price");
 		System.out.println("\n-----------------------------------------------------------------");
 
 		for (var i = 1; i < n; i++) {
