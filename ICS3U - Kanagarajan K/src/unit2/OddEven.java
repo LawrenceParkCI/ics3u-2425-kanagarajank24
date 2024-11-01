@@ -2,7 +2,7 @@ package unit2;
 
 import java.util.Scanner;
 /**
- * Description: This program takes an integer from the user and returns if is  <br>
+ * Description: This program takes an integer from the user and returns if is negitive or positive <br>
  * Date: November 1, 2024
  * @author Kaleena Kanagarajan
  */
