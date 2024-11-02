@@ -22,6 +22,7 @@ public class AboutMe {
 		System.out.println("My teacher is Ms. Kemp.");
 		
 		System.out.println("\"Go Panthers!!\"");
+
 		
 		//These statements print out my schedule this week 
 		System.out.println("\nMy School Schedule");
