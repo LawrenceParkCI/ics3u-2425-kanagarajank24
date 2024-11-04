@@ -17,7 +17,7 @@ public class BasicBoolean {
 
 		//we've declared a variable called isPurple of boolean type
 		//Recall: boolean holds either true or false (1 or 0)
-		boolean isPurple = false;
+		//boolean isPurple = false; (I turned it into a comment because it is not used and creating a problem)
 
 
 		/*
