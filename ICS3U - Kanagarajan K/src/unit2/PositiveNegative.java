@@ -2,12 +2,12 @@ package unit2;
 
 import java.util.Scanner;
 /**
- * Description: This program takes an integer from the user and returns if is positive or negitive and if it is divisible by 7.<br>
+ * Description: This program takes an integer from the user and returns if is positive or negative and if it is divisible by 7.<br>
  * Date: November 1, 2024
  * @author Kaleena Kanagarajan
  */
 
-public class PositiveNegitive {
+public class PositiveNegative {
 
 	/**
 	 * This is the entry point to the program
@@ -23,7 +23,7 @@ public class PositiveNegitive {
 		System.out.println("Please input an integer and <Enter>");
 		posNeg = sc.nextInt();
 		
-		//Check if positive or negitive and tell user
+		//Check if positive or negative and tell user
 		if (posNeg == 0) {
 			System.out.println("Your number is neither negitive nor positive. It is 0!");
 		}
@@ -44,7 +44,7 @@ public class PositiveNegitive {
 		else{
 			System.out.println("Your number is not divisble by 7 :(");
 		}
-
+  
 		sc.close();
 
 	}
