@@ -1,6 +1,7 @@
 package unit2;
 
 import java.util.Scanner;
+
 /**
  * Description: This program takes an integer from the user and returns if is odd or even. <br>
  * Date: November 1, 2024
