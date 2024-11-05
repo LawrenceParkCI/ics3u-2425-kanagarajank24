@@ -15,27 +15,26 @@ public class PositiveNegative {
 	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		
+
 		//Variables
 		int posNeg;
 
 		//Get user input
 		System.out.println("Please input an integer and <Enter>");
 		posNeg = sc.nextInt();
-		
+
 		//Check if positive or negative and tell user
 		if (posNeg == 0) {
 			System.out.println("Your number is neither negitive nor positive. It is 0!");
 		}
-		else{
-			if (posNeg > 0) {
-				System.out.println("Your number is positive!");
-			}
-			else{
-				System.out.println("Your number is negitive!");
-			}
-			
+		else if(posNeg > 0) {
+			System.out.println("Your number is positive!");
 		}
+		else{
+			System.out.println("Your number is negitive!");
+		}
+
+
 
 		//Check if it is divisible by 7 and tell user
 		if (posNeg % 7 == 0){
@@ -44,7 +43,7 @@ public class PositiveNegative {
 		else{
 			System.out.println("Your number is not divisble by 7 :(");
 		}
-  
+
 		sc.close();
 
 	}
