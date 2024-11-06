@@ -48,6 +48,6 @@ public class IfStatements2 {
 			System.out.println("Sorry, not quite yet.");
 		}
 
-	
+	in.close();
 	}
 }

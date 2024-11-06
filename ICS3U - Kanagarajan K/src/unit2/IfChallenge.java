@@ -44,21 +44,56 @@ public class IfChallenge {
 
 		//Get user input
 		System.out.println("What is your favourite number (integers only pls)?");
-		int favNum = in.nextInt();
+		String favNum = in.nextLine();
+		int num = Integer.parseInt(favNum);
 
+		
 		//Check if negative
-		if (favNum < 0) {
+		if (num < 0) {
+			
 			System.out.println("You need to look on the brightside.");
+			
 		}
 
 		//Check if odd
-		if (favNum % 2 != 0) {
-			System.out.println("That's a bit weird");
+		if (num % 2 != 0) {
+			
+			System.out.println("That's a bit weird.");
 
 		}
 		
+		//Check is divisible by 2 and 3
+		if (num % 2 == 0 && num % 3 == 0) {
+			
+			System.out.println("You should consider 6.");
+			
+		}
+		else {
+			
+			System.out.println("You can keep wholesome.");
+			
+		}
+		
+		//Check ones place digit
+		
+		//Instead of the actual numbers 8 and 9, I used their ASCII code, because the ones place I am finding below is also an ASCII value.
+		if ((favNum.charAt(favNum.length() - 1)) == 56) {
+			
+			System.out.println("You are too full.");
+			
+		}
+		else if (favNum.charAt(favNum.length() - 1) == 57) {
+			
+			System.out.println("Canada is a nice country");
+			
+		}
+		else {
+			
+			System.out.println("\"don't count on it\"");
+		}
+		
 
-
+		in.close();
 
 	}
 }
