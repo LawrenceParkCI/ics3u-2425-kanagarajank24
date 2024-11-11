@@ -2,7 +2,7 @@ package unit2;
 import java.util.Scanner;
 
 /**
- * Description: This follows the String Challenge worksheet, in which I take the users input and manipulate it. <br>
+ * Description: This follows the String Challenge worksheet, in which users can play a trivia game.. <br>
  * Date: Nov 8, 2024
  * @author Kaleena Kanagarajan
  */
@@ -137,25 +137,20 @@ public class StringChallenge {
 
 		}
 
-
-
-
 		//Get user information
-
 		System.out.println("\nWhat are two of your friends' names?");
 		System.out.print("Friend 1: ");
 		friend1 = sc.nextLine();
-
 		System.out.print("Friend 2: ");
 		friend2 = sc.nextLine();
-
 
 		//Ask fifth question
 		System.out.println("\nWhich of your friends name comes first alphabetically");
 		userAns = sc.nextLine();
 
 		//Check Answer
-		//I use .compareTo() to compare the two names and find out which one comes alphabetically first. 
+		//I use .compareTo() to compare the two names and find out which one comes alphabetically first.
+		//I combine this with .toLowerCase here, so that if one name is capilatilzed and the other is not, the answer will still be correct. Normally, we would use .compareToIgnoreCase
 		if (friend1.toLowerCase().compareTo(friend2.toLowerCase()) > 0 && userAns.equalsIgnoreCase(friend2)) {
 
 			System.out.println("That's Correct");
