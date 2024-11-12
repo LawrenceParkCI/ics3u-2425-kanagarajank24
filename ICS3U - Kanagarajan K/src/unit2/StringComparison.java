@@ -43,9 +43,45 @@ class StringComparison {
       https://www.javatpoint.com/string-comparison-in-java
 
       Demonstrate the use of the functions:
+       String name1 = "Bob";
+        String name2 = "Anna";
+      
         .compareTo()
+        if (name1.compare2(name2) < 0){
+        	System.out.println(name1 + " comes before " + name2);
+        }
+        else{
+        	System.out.println(name2 + " comes before " + name1);
+        }
+        
+        output:
+        Anna comes before Bob
+        
         .equals()
+        if (name1.equals(name2)){
+        	 System.out.println(name1 + " is the same as " + name2);
+        }
+        else{
+        	System.out.println(name1 + " is not the same as " + name2);
+        }
+        
+        output:
+        Bob is not the same as Anna
+        
         .equalsIgnoreCase()
+        String s = "hello";
+        String t = "Hello";
+        
+        if (s.equalsIgnoreCase(t)){
+        	System.out.println(s + " the same as " + t);
+        }
+        else{
+        	System.out.println(s + " is not the same as " + t);
+        }
+        
+        output:
+        hello is the same as Hello
+        
 		 */
 
 
