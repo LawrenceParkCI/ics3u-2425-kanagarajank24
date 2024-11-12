@@ -150,7 +150,7 @@ public class StringChallenge {
 
 		//Check Answer
 		//I use .compareTo() to compare the two names and find out which one comes alphabetically first.
-		//I combine this with .toLowerCase here, so that if one name is capilatilzed and the other is not, the answer will still be correct. Normally, we would use .compareToIgnoreCase
+		//I combine this with .toLowerCase here, so that if one name is capitalized and the other is not, the answer will still be correct. Normally, we would use .compareToIgnoreCase
 		if (friend1.toLowerCase().compareTo(friend2.toLowerCase()) > 0 && userAns.equalsIgnoreCase(friend2)) {
 
 			System.out.println("That's Correct");

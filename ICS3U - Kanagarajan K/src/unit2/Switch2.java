@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 /**
 Description: This completes the Switch 2 worksheet. <br>
-Date: Nov 11, 2024
+Date: Nov 12, 2024
 @author Kaleena Kanagarajan
  */
 
@@ -22,30 +22,41 @@ public class Switch2 {
 		 */
 
 		//Can you create it such that you can remove some breaks?
-		/*
-		 * To start, we can remove the break in the default statement, because there are no other conditions after to check.
-		 * 
-		 */
+		// I can do this by grouping the cases, so that the cases with the months with the same amount of days will fall-through each other and reach the same print statement. This requires on one brake statement for each group.
+		
 
 		Scanner sc = new Scanner (System.in);
 
 		//Variables
 		String month;
-		int year;
+		int year = 0;
 		
 		//Get user input
 		System.out.println("Input a month and <Enter>.");
 		month = sc.nextLine();
 
+		if (month.equalsIgnoreCase("Febuary")) {
 		System.out.println("Input a year and <Enter>.");
 		year = sc.nextInt();
-
+		}
 
 		//Check the user input, and output the corresponding answer
 		switch (month.toLowerCase()) {
 
 		case "january":
-			System.out.println("January has 31 days.");
+			
+		case "march":
+			
+		case "may":
+			
+		case "july":
+
+		case "august":
+			
+		case "october":
+			
+		case "december":
+			System.out.println(month + " has 31 days.");
 			break;
 
 		case "febuary":
@@ -57,44 +68,15 @@ public class Switch2 {
 			}	
 			break;
 
-		case "march":
-			System.out.println("March has 31 days.");
-			break;
-
+		
 		case "april":
-			System.out.println("April has 30 days.");
-			break;
-
-		case "may":
-			System.out.println("May has 31 days.");
-			break;
-
+			
 		case "june":
-			System.out.println("June has 30 days.");
-			break;
-
-		case "july":
-			System.out.println("July has 31 days.");
-			break;
-
-		case "august":
-			System.out.println("August has 31 days.");
-			break;
 
 		case "september":
-			System.out.println("Spetember has 30 days.");
-			break;
-
-		case "october":
-			System.out.println("October has 31 days.");
-			break;
 
 		case "november":
-			System.out.println("November has 30 days.");
-			break;
-
-		case "december":
-			System.out.println("December has 31 days.");
+			System.out.println(month + " has 30 days.");
 			break;
 
 		default:
