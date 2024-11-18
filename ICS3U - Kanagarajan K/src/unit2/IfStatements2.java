@@ -35,19 +35,19 @@ public class IfStatements2 {
 
 		//Copy the code below, and try to find a solution.
 		//Comment the code above to avoid compilation errors.
-		
+
 		//Declare Title
 		String title;
-		
+
 		if (userAge > 18) { //If they're over 18, they are titled an adult
 			title = "Adult";
 			System.out.println(title);
 		} 
 		else {  //if they're not over 18, I don't want a title
-			
+
 			System.out.println("Sorry, not quite yet.");
 		}
 
-	in.close();
+		in.close();
 	}
 }
