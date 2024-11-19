@@ -28,7 +28,7 @@ public class NameGame {
 		System.out.println("What is your name?");
 		name = sc.nextLine();
 
-		if(random < 6) {
+		if(random < 7) {
 			System.out.println( name + "! That's my favourite name ( ˶ˆᗜˆ˵ )");
 		}
 		else {
