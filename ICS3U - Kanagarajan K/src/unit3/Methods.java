@@ -4,11 +4,15 @@ package unit3;
    - Introduction
    - Using Static methods
    - Parts of a method
-	 Date:
-	 @author 
+	 Date: Dec 13, 2024
+	 @author Kaleena Kanagarajan
  */
 
 public class Methods {
+	/**
+	 * This is the entry point to the program
+	 * @param args unused
+	 */
 	public static void main(String[] args) {
 		/**
       Introduction
@@ -27,10 +31,10 @@ public class Methods {
       Using Static Methods
 		 */
 		//Print out a sentence about this school year
+		System.out.println("This school year, I am in grade 11.");
 
 		/*
       You used a method! The println() method takes some information (parameter), and does something with it - in this case, it puts the text into the console.
-
       You as the user don't know how it works, but because someone has made it, you can simply use it again and again.
 		 */
 
@@ -40,13 +44,27 @@ public class Methods {
 		int myNum = 30;
 		myNum = doubleNumber(myNum);
 		System.out.println(myNum);
+		
+		/*
+		 * The method doubleNumber(), which requires on integer parameter, is called.
+		 * This code calls it with myNum, which hold the int 30.
+		 * The method takes 30, multiples it by 2, then returns it.
+		 * Finally, the variable myNum is printed, which is not changed to 60. 
+		 * This is because the value of this variable is reassigned to the value of doubleNumber(myNum), or double itself.
+		 */
 
 		//Explain what is happening
 		System.out.println(doubleNumber(5));
+		/*
+		 * The method is now taking 5 as the argument and returning 5 * 2. 
+		 * Then, using the println method, the value of doubleNumber(5) is printed out.
+		 */
 
 
 		//Part 3 is at the bottom, and return here to print out your method's return value
-
+		
+		System.out.println(numberMax(3, 4));
+		
 	}
 
 
@@ -68,7 +86,7 @@ public class Methods {
 	 * @param num - a number to be doubled
 	 * @return int - a value that was double its original given value
 	 */
-	//(b)   (c)    (d)     (e)                 (f)
+	//(b)   (c)    (d)     (e)       (f)
 	public static int doubleNumber(int num) {
 		int returnValue = num * 2;
 		return returnValue; //sends the information back to be used
@@ -80,4 +98,8 @@ public class Methods {
 	/*
     Create a method that has 2 int as parameters, and returns the larger one. The name of the method is larger.
 	 */
+	public static int numberMax(int num1, int num2) {
+		return Math.max(num1, num2);
+	}
+	
 }
