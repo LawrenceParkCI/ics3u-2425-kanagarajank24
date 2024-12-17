@@ -6,6 +6,10 @@ Date: Dec 13, 2024
 @author Kaleena Kanagarajan
  */
 public class MethodChallenge1 {
+	/**
+	 * This is the entry point to the program
+	 * @param args unused
+	 */
 	public static void main( String[] args )    {
 		// Complete the function below. Don't forget to comment.
 		double d1 = distance(-2,1 , 1,5);
@@ -20,14 +24,14 @@ public class MethodChallenge1 {
 	}
 
 	/**
- (Description)
+ Decription: This methods calulctes the distance between two (x, y) coordinates.
  @param x1 -> x value of first coordinate
  @param y1 -> y value of first coordinate
  @param x2 -> x value of second coordinate
  @param y2 -> y value of second coordinate
- @return distance between two (x, y) coordinates stored in the length variable 
+ @return distance between the two coordinates
 	 */
-	public static double distance( int x1, int y1, int x2, int y2 ){
+	public static double distance(int x1, int y1, int x2, int y2 ){
 		double length = Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
 		return length;
 	}
