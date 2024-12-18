@@ -12,7 +12,7 @@ public class MathPlus {
 	 * @param args unused
 	 */
 	public static void main(String[] args) {
-		
+
 	}
 
 	/**
