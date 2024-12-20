@@ -173,4 +173,5 @@ public class Arrays {
 		//We can do this by printing out every index of the array. We can write out every index and print statement, or just do it with a for loop.
 
 	}
+
 }
