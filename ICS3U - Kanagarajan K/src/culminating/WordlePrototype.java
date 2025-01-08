@@ -21,28 +21,40 @@ public class WordlePrototype {
 		//Method is needed. this wont work. Or make word a global variable
 		int randomNum = (int) (Math.random()*(words.length));
 		String word = words[randomNum];
-		String userGuess;
+		String user;
 		char [] correct;
 
-		userGuess = sc.nextLine();
-		char[] guess = userGuess.toCharArray();
+		user = sc.nextLine();
+		char[] userArray = user.toCharArray();
 		
-		for(int i = 0; i < guess.length; i ++) {
-			System.out.println(guess[i]);
-		}
-		
+//		for(int i = 0; i < guess.length; i ++) {
+//			System.out.println(guess[i]);
+//		}
+//		
+		sc.close();
 
 	}
 
 	//when checking if green or yellow, check arrays duplicate letters or make array with 5 charcters, but ir correct, put 0 in chars place
 	/**
-	 *Description: This methods find which letter are correct in the user's Guess
-	 *@param user -> this is the guess the user has made.
-	 *@param word -> actual word
-	 *@return an array of the correct letters
+	 *Description: This method checks if any of the letters in the user’s guess are in the correct word.
+	 *@param userArray -> This is the user’s guess, which is stored in an array of characters
+	 *@param word -> This is the correct word
+	 *@return an array of integers where 0s will represent incorrect letters, and correct will be 1s.
 	 */
-	public static char []contains(String user) {
-		return null;
+	
+	public static char []containLetter(char[] userArray, String word) {
+		char[] containsLetter = new char [5];
+		
+		for (int i = 0; i < 5; i++) {
+			
+			if(word.indexOf(userArray[i]) == -1) {
+				containsLeter[i] = 0;
+			}
+			
+		}
+		
+		return containsLetter;
 	
 
 	}
