@@ -17,6 +17,8 @@ public class WordlePrototype {
 		//System.out.format("%-3c%-3c%-3c%-3c%-3c");
 		userGuess = sc.nextLine();
 		
+		if(words.includes("happy"))
+		
 		for (int i = 0; i < 5; i++) {
 			
 		
@@ -45,10 +47,11 @@ public class WordlePrototype {
 		
 		return randomWord;
 	}
-	
+	//when checking if green or yellow, check arrays duplicate letters or make array with 5 charcters, but ir correct, put 0 in chars place
 	/**
 	 *Description: This methods find which letter are correct in the user's Guess
 	 *@param user -> this is the guess the user has made.
+	 *@para word -> actual word
 	 *@return an array of the correct letters
 	 */
 	//public static char [] randomWord(String user) {
