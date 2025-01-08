@@ -1,63 +1,51 @@
-package Culminating;
+package culminating;
 import java.util.Scanner;
 
+/**
+Description:This program is where I am planning and testing my Wordle Final project. <br>
+Date: Jan 8, 2025
+@author Kaleena Kanagarajan
+ */
 public class WordlePrototype {
+
+	/**
+	 * This is the entry point to the program
+	 * @param args unused
+	 */	
 	//static Console c; <- add this in real program so that the console applys to all methods?
 	public static void main(String[] args) {
-		
+
 		Scanner sc = new Scanner(System.in);
 		String [] words = {"weary", "happy", "magic", "shift", "ruins"};
-		
+
 		//Method is needed. this wont work. Or make word a global variable
 		int randomNum = (int) (Math.random()*(words.length));
 		String word = words[randomNum];
 		String userGuess;
 		char [] correct;
-		
-		//System.out.format("%-3c%-3c%-3c%-3c%-3c");
+
 		userGuess = sc.nextLine();
+		char[] guess = userGuess.toCharArray();
 		
-		if(words.includes("happy"))
-		
-		for (int i = 0; i < 5; i++) {
-			
-		
-			
+		for(int i = 0; i < guess.length; i ++) {
+			System.out.println(guess[i]);
 		}
 		
-		System.out.format("\n%-3c%-3c%-3c%-3c%-3c", '-', '-', '-', '-', '-');
-		
-		
-		
-		//System.out.println(randomWord(words));
-		//System.out.println(words.length);
 
 	}
 
-	//This method is needed
-	/**
-	 *Description: This methods gets a random word from an array of Strings.
-	 *@param words -> a String array of 5 letter words 
-	 *@return a random word from the array 
-	 */
-	public static String randomWord(String[] words) {
-		
-		int randomNum =(int) (Math.random()*(words.length));
-		String randomWord = words[randomNum];
-		
-		return randomWord;
-	}
 	//when checking if green or yellow, check arrays duplicate letters or make array with 5 charcters, but ir correct, put 0 in chars place
 	/**
 	 *Description: This methods find which letter are correct in the user's Guess
 	 *@param user -> this is the guess the user has made.
-	 *@para word -> actual word
+	 *@param word -> actual word
 	 *@return an array of the correct letters
 	 */
-	//public static char [] randomWord(String user) {
-		//String word = randomWord(words);
+	public static char []contains(String user) {
+		return null;
 	
-	//}
 
- 
+	}
+
+
 }
