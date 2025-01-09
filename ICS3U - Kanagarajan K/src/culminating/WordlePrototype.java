@@ -30,6 +30,12 @@ public class WordlePrototype {
 //		for(int i = 0; i < guess.length; i ++) {
 //			System.out.println(guess[i]);
 //		}
+		
+		System.out.println(containsLetter(userArray, word));
+		char [] c = containsLetter(userArray, word);
+		for(int i = 0; i < 5; i++) {
+			System.out.println(containsLetter(userArray, word));
+		}
 //		
 		sc.close();
 
@@ -43,20 +49,21 @@ public class WordlePrototype {
 	 *@return an array of integers where 0s will represent incorrect letters, and correct will be 1s.
 	 */
 	
-	public static char []containLetter(char[] userArray, String word) {
+	public static char []containsLetter(char[] userArray, String word) {
 		char[] containsLetter = new char [5];
 		
 		for (int i = 0; i < 5; i++) {
 			
 			if(word.indexOf(userArray[i]) == -1) {
-				containsLeter[i] = 0;
+				containsLetter[i] = 0;
+			}
+			else {
+				containsLetter[i] = 1;
 			}
 			
 		}
 		
 		return containsLetter;
-	
-
 	}
 
 
