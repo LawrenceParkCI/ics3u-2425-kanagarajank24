@@ -28,7 +28,8 @@ public class WordlePrototype {
 		 * - Music
 		 * - If I have time, add score storing method
 		 */
-		Console c = new Console(100, 150, 20, "Wordle");
+		Console c = new Console(70, 150, 15, "Wordle");
+		Console s = new Console(10, 10, 15, "Input");
 
 		Scanner sc = new Scanner(System.in);
 		String [] words = {"WEARY", "HAPPY", "MAGIC", "SHIFT", "RUINS"};
@@ -54,187 +55,197 @@ public class WordlePrototype {
 
 
 		//Intro
-
+		/*
 		c.setColor(new Color(120, 178, 123)); 
-		c.fillRect(0, 0, 1000, 1000);
+		c.fillRect(0, 0, 2000, 1000);
 
 		c.setColor(Color.WHITE); 
-		c.setFont(new Font("SansSerif", Font.PLAIN, 100)); 
-		c.drawString("Wordle", 290, 475);
+		c.setFont(new Font("SansSerif", Font.PLAIN, 150)); 
+		c.drawString("Wordle", 420, 450);
 
 		Thread.sleep(1000); 
 		c.setFont(new Font("SansSerif", Font.PLAIN, 20));
-		c.drawString("Hit any key to continue", 350, 525);
+		c.drawString("Hit any key to continue", 550, 510);
 
 		c.getChar(); 
 		c.clear();
 		// 
+		
+		 
 		//Instructions 
+		
+		int x = 70;
+		int y = 100;
 
 		c.setColor(Color.BLACK);
 		c.setFont(new Font("SansSerif", Font.BOLD, 70));
-		c.drawString("How to Play", 70, 100);
+		c.drawString("How to Play", x, y);
 
 		c.setFont(new Font("SansSerif", Font.PLAIN, 30));
-		c.drawString("- You have 6 chances to guess the wordle", 100, 170);
-		c.drawString("- The colour of the tiles will change to show you how", 100, 235);
-		c.drawString("  close you were", 100, 275);
+		c.drawString("- You have 6 chances to guess the wordle", x + 30, y + 70);
+		c.drawString("- The colour of the tiles will change to show you how close you were", x + 30, y + 135);
 
 		c.setFont(new Font("SansSerif", Font.BOLD, 40));
-		c.drawString("Examples", 70, 375);
+		c.drawString("Examples", x, y + 220);
 
 		//Green example
 		c.setColor(new Color(120, 178, 123)); 
-		c.fillRect(100, 420, 70, 70);
+		c.fillRect(x + 30, y + 265, 70, 70);
 
 		c.setColor(Color.BLACK); 
-		c.drawRect(100, 420, 70, 70);
-		c.drawRect(190, 420, 70, 70);
-		c.drawRect(280, 420, 70, 70);
-		c.drawRect(370, 420, 70, 70);
-		c.drawRect(460, 420, 70, 70);
+		c.drawRect(x + 30, y + 265, 70, 70);
+		c.drawRect(x + 120, y + 265, 70, 70);
+		c.drawRect(x + 210, y + 265, 70, 70);
+		c.drawRect(x + 300, y + 265, 70, 70);
+		c.drawRect(x + 390, y + 265, 70, 70);
 
 		c.setColor(Color.WHITE);
 		c.setFont(new Font("SansSerif", Font.BOLD, 40));
-		c.drawString("W", 115, 470);
+		c.drawString("W", x + 45, y + 315);
 
 		c.setColor(Color.BLACK);
-		c.drawString("O", 210, 470);
-		c.drawString("R", 300, 470);
-		c.drawString("D", 390, 470);
-		c.drawString("Y", 480, 470);
+		c.drawString("O", x + 140, y + 315);
+		c.drawString("R", x + 230, y + 315);
+		c.drawString("D", x + 320, y + 315);
+		c.drawString("Y", x + 410, y + 315);
 
 		c.setFont(new Font("SansSerif", Font.BOLD, 30));
-		c.drawString("W", 100, 540);
+		c.drawString("W", x + 30, y + 395);
 		c.setFont(new Font("SansSerif", Font.PLAIN, 30));
-		c.drawString("     is in the word and in the correct spot", 100, 540);
+		c.drawString("     is in the word and in the correct spot", x + 30, y + 395);
 
 		//Yellow example
 		c.setColor(Color.BLACK); 
-		c.drawRect(100, 590, 70, 70);
+		c.drawRect(x + 30, y + 445, 70, 70);
 
 		c.setColor(new Color(219, 204, 90)); 
-		c.fillRect(190, 590, 70, 70);
+		c.fillRect(x + 120, y + 445, 70, 70);
 
 		c.setColor(Color.BLACK);  
-		c.drawRect(190, 590, 70, 70);
-		c.drawRect(280, 590, 70, 70);
-		c.drawRect(370, 590, 70, 70);
-		c.drawRect(460, 590, 70, 70);
+		c.drawRect(x + 120, y + 445, 70, 70);
+		c.drawRect(x + 210, y + 445, 70, 70);
+		c.drawRect(x + 300, y + 445, 70, 70);
+		c.drawRect(x + 390, y + 445, 70, 70);
 
 
 		c.setFont(new Font("SansSerif", Font.BOLD, 40));
-		c.drawString("L", 120, 640);
+		c.drawString("L", x + 50, y + 495);
 
 		c.setColor(Color.WHITE);
-		c.drawString("I", 220, 640);
+		c.drawString("I", x + 150, y + 495);
 
 		c.setColor(Color.BLACK);
-		c.drawString("G", 300, 640);
-		c.drawString("H", 390, 640);
-		c.drawString("T", 480, 640);
+		c.drawString("G", x + 230, y + 495);
+		c.drawString("H", x + 320, y + 495);
+		c.drawString("T", x + 410, y + 495);
 
 		c.setFont(new Font("SansSerif", Font.BOLD, 30));
-		c.drawString("I", 100, 710);
+		c.drawString("I", x + 30, y + 565);
 		c.setFont(new Font("SansSerif", Font.PLAIN, 30));
-		c.drawString("   is in the word but in the wrong spot", 100, 710);
+		c.drawString("   is in the word but in the wrong spot", x + 30, y + 565);
 
 		//Grey example
 
 		c.setColor(Color.BLACK); 
-		c.drawRect(100, 760, 70, 70);
+		c.drawRect(x + 30, y + 615, 70, 70);
 
 		c.setColor(Color.GRAY); 
-		c.fillRect(370, 760, 70, 70);
+		c.fillRect(x + 300, y + 615, 70, 70);
 
 		c.setColor(Color.BLACK);  
-		c.drawRect(190, 760, 70, 70);
-		c.drawRect(280, 760, 70, 70);
-		c.drawRect(370, 760, 70, 70);
-		c.drawRect(460, 760, 70, 70);
+		c.drawRect(x + 120, y + 615, 70, 70);
+		c.drawRect(x + 210, y + 615, 70, 70);
+		c.drawRect(x + 300, y + 615, 70, 70);
+		c.drawRect(x + 390, y + 615, 70, 70);
 
 
 		c.setFont(new Font("SansSerif", Font.BOLD, 40));
-		c.drawString("R", 120, 810);
-		c.drawString("O", 210, 810);
-		c.drawString("G", 300, 810);
+		c.drawString("R", x + 50, y + 665);
+		c.drawString("O", x + 140, y + 665);
+		c.drawString("G", x + 230, y + 665);
 
 		c.setColor(Color.WHITE);
-		c.drawString("U", 390, 810);
+		c.drawString("U", x + 320, y + 665);
 
 		c.setColor(Color.BLACK);
-		c.drawString("E", 480, 810);
+		c.drawString("E", x + 410, y + 665);
 
 		c.setFont(new Font("SansSerif", Font.BOLD, 30));
-		c.drawString("U", 100, 880);
+		c.drawString("U", x + 30, y + 735);
 		c.setFont(new Font("SansSerif", Font.PLAIN, 30));
-		c.drawString("    is not in the word in any spot", 100, 880);
+		c.drawString("    is not in the word in any spot", x + 30, y + 735);
 
 		//Continue
-		Thread.sleep(1000);
-		c.setFont(new Font("SansSerif", Font.PLAIN, 20));
-		c.drawString("Hit any key to continue", 350, 910);
+		Thread.sleep(2000);
+		c.setFont(new Font("SansSerif", Font.BOLD, 35));
+		c.drawString("Hit any key to continue", x + 420, y + 790);
 		c.getChar();
-
+		*/
 
 
 		c.clear();
-
+ 
 		//Player Grid
+		
+		int x1 = 400;
+		int y1 = 150;
+		
 		c.setColor(Color.BLACK);
 
 		c.setFont(new Font("SansSerif", Font.PLAIN, 70));
-		c.drawString("Wordle", 330, 150);
+		c.drawString("Wordle", x1 + 100, y1 - 50);
 
 		//Guess 1
-		c.drawRect(230, 240, 70, 70);
-		c.drawRect(320, 240, 70, 70);
-		c.drawRect(410, 240, 70, 70);
-		c.drawRect(500, 240, 70, 70);
-		c.drawRect(590, 240, 70, 70);
+		c.drawRect(x1, y1, 70, 70);
+		c.drawRect(x1 + 90, y1, 70, 70);
+		c.drawRect(x1 + 180, y1, 70, 70);
+		c.drawRect(x1 + 270, y1, 70, 70);
+		c.drawRect(x1 + 360, y1, 70, 70);
 
 		//Guess 2
-		c.drawRect(230, 330, 70, 70);
-		c.drawRect(320, 330, 70, 70);
-		c.drawRect(410, 330, 70, 70);
-		c.drawRect(500, 330, 70, 70);
-		c.drawRect(590, 330, 70, 70);
+		c.drawRect(x1, y1 + 90, 70, 70);
+		c.drawRect(x1 + 90, y1 + 90, 70, 70);
+		c.drawRect(x1 + 180, y1 + 90, 70, 70);
+		c.drawRect(x1 + 270, y1 + 90, 70, 70);
+		c.drawRect(x1 + 360, y1 + 90, 70, 70);
 
 		//Guess 3
-		c.drawRect(230, 420, 70, 70);
-		c.drawRect(320, 420, 70, 70);
-		c.drawRect(410, 420, 70, 70);
-		c.drawRect(500, 420, 70, 70);
-		c.drawRect(590, 420, 70, 70);
+		c.drawRect(x1, y1 + 180, 70, 70);
+		c.drawRect(x1 + 90, y1 + 180, 70, 70);
+		c.drawRect(x1 + 180, y1 + 180, 70, 70);
+		c.drawRect(x1 + 270, y1 + 180, 70, 70);
+		c.drawRect(x1 + 360, y1 + 180, 70, 70);
 
 		//Guess 4
-		c.drawRect(230, 510, 70, 70);
-		c.drawRect(320, 510, 70, 70);
-		c.drawRect(410, 510, 70, 70);
-		c.drawRect(500, 510, 70, 70);
-		c.drawRect(590, 510, 70, 70);
+		c.drawRect(x1, y1 + 270, 70, 70);
+		c.drawRect(x1 + 90, y1 + 270, 70, 70);
+		c.drawRect(x1 + 180, y1 + 270, 70, 70);
+		c.drawRect(x1 + 270, y1 + 270, 70, 70);
+		c.drawRect(x1 + 360, y1 + 270, 70, 70);
 
 		//Guess 5
-		c.drawRect(230, 600, 70, 70);
-		c.drawRect(320, 600, 70, 70);
-		c.drawRect(410, 600, 70, 70);
-		c.drawRect(500, 600, 70, 70);
-		c.drawRect(590, 600, 70, 70);
+		c.drawRect(x1, y1 + 360, 70, 70);
+		c.drawRect(x1 + 90, y1 + 360, 70, 70);
+		c.drawRect(x1 + 180, y1 + 360, 70, 70);
+		c.drawRect(x1 + 270, y1 + 360, 70, 70);
+		c.drawRect(x1 + 360, y1 + 360, 70, 70);
 
 		//Guess 6
-		c.drawRect(230, 690, 70, 70);
-		c.drawRect(320, 690, 70, 70);
-		c.drawRect(410, 690, 70, 70);
-		c.drawRect(500, 690, 70, 70);
-		c.drawRect(590, 690, 70, 70);
+		c.drawRect(x1, y1 + 450, 70, 70);
+		c.drawRect(x1 + 90, y1 + 450, 70, 70);
+		c.drawRect(x1 + 180, y1 + 450, 70, 70);
+		c.drawRect(x1 + 270, y1 + 450, 70, 70);
+		c.drawRect(x1 + 360, y1 + 450, 70, 70);
 
 
 		//for(int i = 0; i < 6; i++) {
 		while(guess < 6) {
 
 			//Get user input
-
+			
+			c.setCursor(30, 70);
 			c.print("Your guess: ");
+			c.setCursorVisible(true);
 			user = c.readLine();
 			user = user.toUpperCase();
 			
@@ -256,7 +267,7 @@ public class WordlePrototype {
 
 			//Decide box colour for letter
 
-			int x = 230;
+			int x2 = 230;
 
 			for(int j = 0; j < 5; j ++) {
 
@@ -269,18 +280,18 @@ public class WordlePrototype {
 				else {
 					c.setColor(Color.GRAY);
 				}
-				c.fillRect(x, 240 + 90 * guess, 70, 70);
+				c.fillRect(x2, 240 + 90 * guess, 70, 70);
 
 				c.setFont(new Font("SansSerif", Font.BOLD, 50));
 				c.setColor(Color.WHITE);
 				if(userArray[j] == 73) {
-					c.drawString(userArray[j] + "", x + 27, 295 + 90* guess);
+					c.drawString(userArray[j] + "", x2 + 27, 295 + 90* guess);
 				}
 				else {
-					c.drawString(userArray[j] + "", x + 17, 295 + 90* guess);
+					c.drawString(userArray[j] + "", x2 + 17, 295 + 90* guess);
 				}
 
-				x += 90;
+				x2 += 90;
 			}
 
 			if(word.equals(user)) {
