@@ -22,7 +22,10 @@ public class WordlePrototype {
 		Scanner sc = new Scanner(System.in);
 		
 		//Variables
-		String [] words = {"WEARY", "HAPPY", "MAGIC", "SHIFT", "RUINS"};
+		String [] words = {"WEARY", "HAPPY", "MAGIC", "SHIFT", "RUINS", "ABOUT", "ALIVE", "ALERT", "BOOST", "BUYER", "CARRY", "CHAIN", "DEPTH", "DEBUT", "EQUAL", 
+				"EXTRA", "FRAME", "FRAUD", "GUESS", "GUARD", "HOTEL", "HORSE", "INDES", "IRONY", "JUICE", "JOINT", "KNOWN", "KINGS", "LOGIC", "LASER", "MONEY", "MUSIC", 
+				"NEEDS", "NEVER", "OCEAN", "ORDER", "PAINT", "PAPER", "RATIO", "READY", "QUICK", "QUEEN", "SIXTH", "SHAPE", "TODAY", "TOPIC", "UNITY", "UPSET", "VAILD", 
+				"VALUE", "WORSE", "WATER", "VIRUS", "VOICE"};
 		int guess;
 
 		//User input
@@ -55,13 +58,13 @@ public class WordlePrototype {
 
 		Thread.sleep(1000); 
 		c.setFont(new Font("SansSerif", Font.PLAIN, 20));
-		c.drawString("Hit any key to continue", 350, 510);
+		c.drawString("Hit any key to start", 360, 510);
 
 		c.getChar(); 
 		c.clear();
 		 
 		//Instructions Page 
-		// x and u variables are used here
+		// x and y variables are used here
 		
 		c.setColor(Color.BLACK);
 		c.setFont(new Font("SansSerif", Font.BOLD, 70));
@@ -168,7 +171,7 @@ public class WordlePrototype {
 		c.drawString("Hit any key to continue", x + 200, y + 790);
 		c.getChar();
 		
-
+		
 		do {
 			c.clear();
 	 
@@ -258,7 +261,7 @@ public class WordlePrototype {
 	
 				for(int j = 0; j < 5; j ++) {
 					
-	
+					//maybe put colour output in a method
 					if(correct[j] == 2) {
 						c.setColor(new Color(120, 178, 123));
 					}
@@ -296,11 +299,11 @@ public class WordlePrototype {
 					c.setColor(Color.WHITE); 
 					c.setFont(new Font("SansSerif", Font.PLAIN, 70)); 
 					c.drawString("You guessed", 240, 425);
-					c.drawString("the word!", 300, 500);
+					c.drawString("the word!", 305, 500);
 					
 					Thread.sleep(1000);
 					c.setFont(new Font("SansSerif", Font.PLAIN, 35));
-					c.drawString("Hit any key to continue", 260, 600);
+					c.drawString("Hit any key to continue", 270, 600);
 					c.getChar();
 					c.clear();
 					
@@ -436,11 +439,8 @@ public class WordlePrototype {
 			}
 			else {
 				correctness[i] = 0;
-
 			}
-
 		}
-
 		return correctness;
 	}
 
@@ -463,33 +463,4 @@ public class WordlePrototype {
 
 		return correctness;
 	}
-
-	/**
-	 *Description: This method will create the output for the letter based on their correctness
-	 *@param  userArray -> This is the user’s guess, which is stored in an array of characters
-	 *@param correctness -> the array which holds the correctness of each letter in the user's guess, which is returned from correctPlace
-	 *@return an array of string where the a letter and symbol according to correctness (x for wrong, - for wrong placement and + for correct) will be stored.
-	 */
-	public static String []output(char[] userArray, int[] correctness) {
-		String[] output = new String [5];
-
-		for(int i = 0; i < 5; i ++) {
-			if(correctness[i] == 0) {
-				output[i] =  userArray[i] + "x";
-			}
-			else if(correctness[i] == 1) {
-				output[i] =  userArray[i] + "-";
-			}
-			else {
-				output[i] =  userArray[i] + "+";
-			}
-		}
-
-		return output;
-	}
-
-
-
-
-
 }
