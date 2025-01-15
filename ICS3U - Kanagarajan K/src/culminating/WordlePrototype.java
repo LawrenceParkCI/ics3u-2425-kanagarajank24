@@ -46,6 +46,8 @@ public class WordlePrototype {
 		int x1 = 230;
 		int y1 = 240;
 
+		//Check what happens when anything other than letters is inputted
+		//Ex. check if four letters and 1 space or something.
 
 		//Start Page
 		
