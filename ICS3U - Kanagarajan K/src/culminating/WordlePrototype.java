@@ -414,6 +414,7 @@ public class WordlePrototype {
 		
 
 		sc.close();
+		//
 
 	}
 	/**
